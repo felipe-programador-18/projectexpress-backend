@@ -1,6 +1,6 @@
 const clientsControllers = require('./clients')
 const expect = require('chai').expect
-const sinon = require('sinon')
+const sinon = require('sinon').expect
 
 
 describe('clients controllers',  () => {
