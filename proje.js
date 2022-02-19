@@ -1,6 +1,7 @@
 const express = require('express')
 const api = express()
 
+const path = require('path')
 
 const poor = 3000
 const indexRouter = require('./routes/index')
@@ -15,6 +16,11 @@ api.use((req, res, next) => {
     next()
 })
 
+//this is for use in the css!!!
+api.use(express.static(path.join(__dirname, 'views')))
+
+api.set('views', path.join(__dirname, 'views'))
+api.set('view engine', 'ejs')
 
 api.use('/', indexRouter)
 api.use('/client', clientRouter )
