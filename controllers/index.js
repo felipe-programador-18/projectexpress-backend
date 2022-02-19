@@ -15,7 +15,7 @@ const calcu = (req, res) => {
     if(req.query.num1 && req.query.num2){
         const {num1, num2} = req.query
         const Adding = parseFloat(num1) + parseFloat(num2)
-        res.send('the some is:' + Adding)
+        res.render('calcu' , {Adding})
     }else{
         res.send('calculadora')
     }
