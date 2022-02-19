@@ -1,10 +1,12 @@
 const home =  (req, res) => {
-    res.send(' very bad')
+    res.render('home', {
+        time: new Date().getTime()
+    })
 }
 
 
 const Subhome = (req, res) => {
-    res.send(' am expensive')
+   res.render('Subhome')
 }
 
 const calcu = (req, res) => {
