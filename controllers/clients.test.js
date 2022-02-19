@@ -4,7 +4,7 @@ const sinon = require('sinon')
 
 
 describe('clients controllers',  () => {
-   it('return all clients', () => {
+   it('create all clients', () => {
        let res = {
            send: function(){}
        }
@@ -12,4 +12,14 @@ describe('clients controllers',  () => {
        mock.expects('send').once().withArgs('fullstack master')
        clientsControllers.create({}, res)
    })
+
+   it('return all clients', () => {
+    let res = {
+        send: function(){}
+    }
+    let mock = sinon.mock(res)
+    mock.expects('send').once().withArgs('fullstack master')
+    clientsControllers.create({}, res)
+})
+
 })

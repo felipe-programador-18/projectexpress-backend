@@ -15,7 +15,7 @@ const calcu = (req, res) => {
         const Adding = parseFloat(num1) + parseFloat(num2)
         res.send('the some is:' + Adding)
     }else{
-        res.send('calculator')
+        res.send('calculadora')
     }
 }
 
