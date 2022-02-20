@@ -6,7 +6,7 @@ router.get('/', indexControlle.home)
 
 router.get('/pagina', indexControlle.Subhome)
 
-router.get('/calculator', indexControlle.calcu)
+router.get('/calcu', indexControlle.calcu)
 
 router.get('/divide', indexControlle.Menos)
 
